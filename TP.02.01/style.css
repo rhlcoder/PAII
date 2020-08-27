@@ -1,0 +1,34 @@
+:root {
+	/* --icono : "⬆️"; */
+	--cursor: url(up.png);
+}
+/* body {
+	cursor: var(--cursor), auto;
+} */
+input {
+	display: block;
+}
+
+h1,
+strong {
+	margin-left: 20px;
+}
+
+#deseados > li:hover {
+	color: #104ddb;
+	list-style-type: circle;
+	cursor: var(--icono), auto;
+}
+
+/* #deseados > li:hover::before {
+	content: var(--icono);
+} */
+
+#deseados:hover {
+	/* content: var(--icono); */
+	cursor: var(--cursor), auto;
+}
+
+button {
+	margin-left: 20px;
+}
