@@ -5,9 +5,9 @@
 span = document.getElementsByClassName('myClass')
 
 function highlight() {
-	for (const el of span) {
-		el.style.background = 'yellow'
-	}
+  for (const el of span) {
+    el.style.background = 'yellow'
+  }
 }
 
 /**
@@ -17,7 +17,7 @@ function highlight() {
 span1 = document.querySelectorAll('.myClass')
 
 function highlight() {
-	for (const el of span1) {
-		el.style.background = 'cyan'
-	}
+  for (const el of span1) {
+    el.style.background = 'cyan'
+  }
 }

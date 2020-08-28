@@ -27,30 +27,30 @@ apellido.addEventListener('blur', validarNombreYApellido);
 password.addEventListener('blur', validarPassword);
 
 function validarNombreYApellido() {
-	let output = [];
-	if (isEmpty(this)) output.push(`${this.name}: No puede estar vacio\n`);
-	if (isNotText(this)) output.push(`${this.name}: Solo acepta texto\n`);
-	if (isBiggerThan20(this)) output.push(`${this.name}: No puede exceder los 20 caracteres\n`);
-	console.log(...output);
+  let output = [];
+  if (isEmpty(this)) output.push(`${this.name}: No puede estar vacio\n`);
+  if (isNotText(this)) output.push(`${this.name}: Solo acepta texto\n`);
+  if (isBiggerThan20(this)) output.push(`${this.name}: No puede exceder los 20 caracteres\n`);
+  console.log(...output);
 }
 
 function validarEdad() {
-	if (isNotNumber(this)) console.log(`${this.name}: Solo acepta numeros`);
+  if (isNotNumber(this)) console.log(`${this.name}: Solo acepta numeros`);
 }
 
 function validarPassword() {
-	let output = [];
-	if (isEmpty(this)) output.push(`${this.name}: No puede estar vacio\n`);
-	if (doesntHaveNumber(this)) output.push(`${this.name}: Debe contener un numero\n`);
-	if (isNotBetween9And20(this)) output.push(`${this.name}: Debe tener entre 9 y 20 caracteres\n`);
-	if (doesntHaveLowerCase(this)) output.push(`${this.name}: Debe contener una minuscula\n`);
-	if (doesntHaveUpperCase(this)) output.push(`${this.name}: Debe contener una mayuscula\n`);
-	console.log(...output);
+  let output = [];
+  if (isEmpty(this)) output.push(`${this.name}: No puede estar vacio\n`);
+  if (doesntHaveNumber(this)) output.push(`${this.name}: Debe contener un numero\n`);
+  if (isNotBetween9And20(this)) output.push(`${this.name}: Debe tener entre 9 y 20 caracteres\n`);
+  if (doesntHaveLowerCase(this)) output.push(`${this.name}: Debe contener una minuscula\n`);
+  if (doesntHaveUpperCase(this)) output.push(`${this.name}: Debe contener una mayuscula\n`);
+  console.log(...output);
 }
 
 function validarEmail() {
-	let output = [];
-	if (isEmpty(this)) output.push(`${this.name}: No puede estar vacio\n`);
-	if (isNotEmail(this)) output.push(`${this.name}: No es un email valido\n`);
-	console.log(...output);
+  let output = [];
+  if (isEmpty(this)) output.push(`${this.name}: No puede estar vacio\n`);
+  if (isNotEmail(this)) output.push(`${this.name}: No es un email valido\n`);
+  console.log(...output);
 }
