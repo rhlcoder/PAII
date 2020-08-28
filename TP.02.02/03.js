@@ -4,7 +4,6 @@
 
 
 const table = document.getElementsByClassName('myTable')
-let i = 0
 
 function insertRow() {
 	const tr = document.createElement('tr')
