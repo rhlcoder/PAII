@@ -4,10 +4,8 @@ const nombre = document.querySelector('#nombre')
 const apellido = document.querySelector('#apellido')
 const password = document.querySelector('#password')
 const errorList = document.querySelector('#errorList')
-// const input = document.querySelector('input')
-const enviar = document.querySelector('form')
+const form = document.querySelector('form')
 
-// let codigosDeError = []
 let errores = {
   nombre   : {
     isEmpty        : true,
@@ -59,17 +57,20 @@ const doesntHaveNumber    = check(/[0-9]/)
 const isNotBetween9And20  = check(/^.{9,21}$/)
 const doesntHaveLowerCase = check(/[a-z]/)
 const doesntHaveUpperCase = check(/[A-Z]/)
-// Fin de hacer las validaciones con regex
 
+
+// events
 edad.addEventListener('blur', validarEdad)
 email.addEventListener('blur', validarEmail)
 nombre.addEventListener('blur', validarNombre)
 apellido.addEventListener('blur', validarApellido)
 password.addEventListener('blur', validarPassword)
-enviar.addEventListener('submit', e => {
-  if (errorList.length !== 0) {
+
+// submit
+form.addEventListener('submit', e => {
+  if (errorQty(errores) !== 0) {
     e.preventDefault()
-  } else {  errorList.textContent = "EXITO!"}
+  }
 })
 
 function validarNombre() {
@@ -112,9 +113,17 @@ function validar() {
     for (const validacion in errores[input]) {
       if (errores[input][validacion]) {
         let li = document.createElement('li')
-        li.textContent = input + ': ' + errorNames[validacion]
+        li.textContent = `${input}: ${errorNames[validacion]}`
         errorList.append(li)
       }
     }
   }
+}
+
+const errorQty = errores => {
+  let o = []
+  for (const key in errores) {
+    o.push(...Object.values(errores[key]))
+  }
+  return o.filter(x => x == true).length
 }
