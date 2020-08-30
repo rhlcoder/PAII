@@ -40,7 +40,9 @@ console.log(nombreYspoilear)
 
 // entonces esta funcion asignada a la constante check acepta 1 argumento (re)
 // y devuelve una funcion (con el regex pre aplicado) y que acepta un argumento (e)
-const check = re => e => (e.value.search(re) === -1 ? true : false)
+
+const check = re => e => (e.value.search(re) === -1 ? true : false) 
+//Nota: despues me di cuenta que sin el ternario es lo mismo: "const check = re => e => (e.value.search(re) === -1"
 
 // de esta manera no tengo que pasar el argumento del evento cada vez que quiera hacer un check nuevo
 // y me permite organizar y separar el codigo de los regex por un lado y la aplicacion a los eventos
