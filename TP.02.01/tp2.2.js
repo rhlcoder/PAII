@@ -9,7 +9,7 @@ const deseados = document.querySelector('#deseados')
 /* Version que pide el TP */
 // Para agragar a la lista de deseados
 productos.addEventListener('click', e => {
-  if (e.target.nodeName == 'BUTTON') {
+  if (e.target.nodeName === 'BUTTON') {
     let id = `#${e.target.parentElement.id}`
     let selected = document.querySelector(id)
     if (document.querySelector(`${id}-deseado`)) {
@@ -26,13 +26,13 @@ productos.addEventListener('click', e => {
 
 deseados.addEventListener('click', e => {
   // Para remover de la lista de deseados
-  if (e.target.nodeName == 'BUTTON') {
+  if (e.target.nodeName === 'BUTTON') {
     let selected = document.querySelector(`#${e.target.parentElement.id}`)
     selected.remove()
   }
 
   // Para ordenar por prioridad
-  if (e.target.nodeName == 'LI') {
+  if (e.target.nodeName === 'LI') {
     let ul = document.querySelector('#deseados')
     let item = document.querySelector('#' + e.target.id)
     if (e.shiftKey) {
@@ -64,7 +64,7 @@ document.addEventListener('keyup', () => {
 
 // Version mas chevere
 /* productos.addEventListener('click', (e) => {
-	if (e.target.nodeName == 'BUTTON') {
+	if (e.target.nodeName === 'BUTTON') {
     e.target.textContent = 'Quitar de la lista de deseados'
     let selected = document.querySelector(`#${e.target.parentElement.id}`)
 		deseados.append(selected)
@@ -72,7 +72,7 @@ document.addEventListener('keyup', () => {
 })
 
 deseados.addEventListener('click', (e) => {
-  if (e.target.nodeName == 'BUTTON') {
+  if (e.target.nodeName === 'BUTTON') {
     e.target.textContent = 'Agregar a la lista de deseados'
 		let selected = document.querySelector(`#${e.target.parentElement.id}`)
 		productos.append(selected)
