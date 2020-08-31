@@ -1,5 +1,5 @@
 /**
- * No hace falta chequear contra 
+ * condiciones equivalentes
  */
 
 // valores de prueba
