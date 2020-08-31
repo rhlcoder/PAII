@@ -43,8 +43,8 @@ section {
 h1 {
   color: var(--font-title);
   text-align: center;
-  font-size: 6vw;
-  padding-top: 6vw;
+  font-size: 8vmin;
+  padding-top: 70px;
 }
 
 h2,
@@ -71,18 +71,19 @@ footer > div {
 footer > h3 {
   text-align: center;
   height: 100%;
+  font-size: 24px;
 }
 
 a {
-  font-size: 2vw;
+  font-size: 24px;
   display: inline-block;
   color: white;
   background: gray;
-  width: 10vw;
-  height: 5vw;
+  width: 90px;
+  height: 45px;
   text-decoration: none;
   text-align: center;
-  padding-top: 1.5vw;
+  padding-top: 10px;
 }
 
 a:hover {
