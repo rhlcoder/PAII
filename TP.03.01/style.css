@@ -1,0 +1,95 @@
+:root {
+  --font-title: #333;
+  --font-body: #555;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--font-body);
+  font-family: sans-serif;
+  font-size: 18px;
+  margin: 3rem auto;
+  max-width: 95vw;
+}
+
+header {
+  background: rgba(67, 95, 161, 0.5);
+  color: var(--font-title);
+  height: 185px;
+}
+
+#content {
+  display: flex;
+  margin-bottom: 3vw;
+}
+
+nav {
+  background: var(--font-title);
+}
+
+aside {
+  font-size: 16px;
+  width: 25vw;
+  margin-right: 3vw;
+}
+
+section {
+  width: 75vw;
+}
+
+h1 {
+  color: var(--font-title);
+  text-align: center;
+  font-size: 6vw;
+  padding-top: 6vw;
+}
+
+h2,
+h3 {
+  color: var(--font-title);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  height: 107px;
+  background: rgba(67, 95, 161, 0.5);
+}
+
+footer > div {
+  width: 45vw;
+  align-self: flex-end;
+  font-size: 1vmin;
+  text-align: right;
+  vertical-align: bottom;
+  margin: 0 5px 2px 0;
+}
+
+footer > h3 {
+  text-align: center;
+  height: 100%;
+}
+
+a {
+  font-size: 2vw;
+  display: inline-block;
+  color: white;
+  background: gray;
+  width: 10vw;
+  height: 5vw;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 1.5vw;
+}
+
+a:hover {
+  background: #39c;
+  color: black;
+}
+
+li {
+  padding-bottom: 2vw;
+}
