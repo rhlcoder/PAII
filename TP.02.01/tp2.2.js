@@ -30,10 +30,8 @@ productos.addEventListener('click', (event) => {
 
 const prioritySort = (event, item) => {
   if (item.nextSibling && event.shiftKey) {
-    // deseados.insertBefore(item.nextSibling, item);
     item.nextSibling.after(item);
   } else if (item.previousSibling && !event.shiftKey) {
-    // deseados.insertBefore(item, item.previousSibling);
     item.previousSibling.before(item);
   }
 };
@@ -75,3 +73,4 @@ document.addEventListener('keyup', () => {
 }); */
 
 // Para saber el valor de una variable en CSS, uso este codigo:
+// console.log(getComputedStyle(document.documentElement).getPropertyValue('--icono'))
